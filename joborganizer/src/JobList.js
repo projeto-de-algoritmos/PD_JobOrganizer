@@ -3,15 +3,15 @@ import React, { useEffect, useState } from "react";
 export const JobList = () => {
   const [jobs, setJobs] = useState([]);
 
-  /*useEffect(() => {
-    fetch("http://localhost:8000/jobs")
+  useEffect(() => {
+    fetch("http://localhost:8001/jobs")
       .then((res) => {
         return res.json();
       })
       .then((data) => {
         setJobs(data);
       });
-  }, []);*/
+  }, []);
 
   return (
     <div className="job-list">

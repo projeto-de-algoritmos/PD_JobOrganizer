@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 export const NewJob = () => {
-  const [job, setJobs] = useState([]);
   const [title, setTitle] = useState("");
   const [comeco, setComeco] = useState("");
   const [fim, setFim] = useState("");
@@ -9,6 +8,14 @@ export const NewJob = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const job = { title, comeco, fim, peso };
+
+    fetch("http://localhost:8001/jobs", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(job),
+    });
   };
 
   return (
