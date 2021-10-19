@@ -32,8 +32,8 @@ https://github.com/projeto-de-algoritmos/PD_JobOrganizer
 cd PD_JobOrganizer && npm install
 
 # Inicie o projeto
-npm start e em outro terminal npx json-server --watch data/db.json --port 8000
-(atenção para não rodar mais de um serviço na mesma porta!!!)
+npm start(ou yarn start) e em outro terminal npx json-server --watch data/db.json --port 8000 (o json-server está configurado para rodar na porta 8000)
+(Atenção para não rodar mais de um serviço na mesma porta!!!)
 (O react é normalmente executado na porta 3000, e o json-server na porta 8000)
 ```
 Após rodar o projeto, apenas acessar http://localhost:3000 para usá-lo.
