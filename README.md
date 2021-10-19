@@ -14,7 +14,9 @@
 JobOrganizer é uma página web que tem como objetivo, pegar todas as suas atividades do dia a dia, com seus respectivos horários de começo e fim, e também com seu respectivo lucro(peso), e retornar o maior lucro possível, sem que as atividades se sobreponham.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+<img src="/joborganizer/images/tela-inicial.png" alt="Github" width="500"/>
+<img src="/joborganizer/images/lista-trabalhos.png" alt="Github" width="500"/>
+<img src="/joborganizer/images/lista-trabalhos.png" alt="Github" width="500"/>
 
 ## Instalação 
 **Linguagem**: JavaScript<br>

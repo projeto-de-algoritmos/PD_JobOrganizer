@@ -1,7 +1,7 @@
 // encontra a posição do último trabalho em um array ordenado 
 //que não tenha conflito com o trabalho array[x]
 const latestNonConflict = (array, x) => {
-    for(let i = x-1; i > 0; i--){
+    for(let i = x-1; i >= 0; i--){
         if(array[i].fim <= array[x-1].comeco){
             return i;
         }
