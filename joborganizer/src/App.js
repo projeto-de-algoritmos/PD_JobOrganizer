@@ -5,10 +5,10 @@ import { JobList } from "./JobList";
 
 export const App = () => {
   return (
-    <>
+    <div>
       <h1 className="title">Bem vindo ao Job Organizer!</h1>
       <NewJob />
       <JobList />
-    </>
+    </div>
   );
 };

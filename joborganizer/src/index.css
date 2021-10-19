@@ -10,6 +10,7 @@ code {
     monospace;
 }
 
+
 * {
   background-color: darkgray;
 }
@@ -48,9 +49,43 @@ code {
 
 .newjob button {
   background: #f1356d;
+  margin-bottom: 100px;
   color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
 }
+
+.job-list{
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.job-preview{
+  width: 250px;
+
+  border: 1px solid #000;
+  border-radius: 10px;
+
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  background-color: white;
+}
+
+.title{
+  justify-content: center;
+}
+
+.job-preview h2{
+  background-color: white;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
