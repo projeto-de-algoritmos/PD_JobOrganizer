@@ -7,7 +7,7 @@ export const NewJob = () => {
   const [fim, setFim] = useState("");
   const [peso, setPeso] = useState("");
   const [jobs, setJobs] = useState([]);
-  const [resultado, setResultado] = useState("");
+  const [resultado, setResultado] = useState("0");
 
   useEffect(() => {
     fetch("http://localhost:8000/jobs")
