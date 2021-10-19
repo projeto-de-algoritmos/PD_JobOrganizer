@@ -16,7 +16,7 @@ JobOrganizer é uma página web que tem como objetivo, pegar todas as suas ativi
 ## Screenshots
 <img src="/joborganizer/images/tela-inicial.png" alt="Github" width="500"/>
 <img src="/joborganizer/images/lista-trabalhos.png" alt="Github" width="500"/>
-<img src="/joborganizer/images/lista-trabalhos.png" alt="Github" width="500"/>
+<img src="/joborganizer/images/valor-calculo.png" alt="Github" width="500"/>
 
 ## Instalação 
 **Linguagem**: JavaScript<br>
