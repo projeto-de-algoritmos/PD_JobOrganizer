@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { intervalScheduling } from './utils/scheduling.js';
+import { intervalScheduling } from "./utils/scheduling.js";
 
 export const NewJob = () => {
   const [title, setTitle] = useState("");
@@ -30,19 +30,25 @@ export const NewJob = () => {
       body: JSON.stringify(job),
     });
 
-    setTitle('');
-    setComeco('');
-    setFim('');
-    setPeso('');
+    setTitle("");
+    setComeco("");
+    setFim("");
+    setPeso("");
     window.location.reload();
   };
 
   const calcula = () => {
-      setResultado(intervalScheduling(jobs, jobs.length));
+    setResultado(intervalScheduling(jobs, jobs.length));
   };
 
   const apaga = () => {
-
+    for (let i = 0; i < jobs.length; i++) {
+      fetch(`http://localhost:8000/jobs/${jobs[i].id}`, {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      });
+    }
+    window.location.reload();
   };
 
   return (
