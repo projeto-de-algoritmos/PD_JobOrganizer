@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { intervalScheduling } from './utils/scheduling.js';
 
 export const NewJob = () => {
@@ -7,6 +7,17 @@ export const NewJob = () => {
   const [fim, setFim] = useState("");
   const [peso, setPeso] = useState("");
   const [jobs, setJobs] = useState([]);
+  const [resultado, setResultado] = useState("");
+
+  useEffect(() => {
+    fetch("http://localhost:8000/jobs")
+      .then((res) => {
+        return res.json();
+      })
+      .then((data) => {
+        setJobs(data);
+      });
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,20 +38,11 @@ export const NewJob = () => {
   };
 
   const calcula = () => {
-    fetch("http://localhost:8000/jobs")
-      .then((res) => {
-        return res.json();
-      })
-      .then((data) => {
-        setJobs(data);
-      });
-
-      console.log(jobs)
-      console.log(intervalScheduling(jobs, jobs.length));
+      setResultado(intervalScheduling(jobs, jobs.length));
   };
 
   const apaga = () => {
-      
+
   };
 
   return (
@@ -77,6 +79,7 @@ export const NewJob = () => {
         <button onClick={handleSubmit}>Adicionar Tarefa</button>
         <button onClick={calcula}>Calcular</button>
         <button onClick={apaga}>Reinicia</button>
+        <label>O maior lucro com as atividades é de R${resultado}</label>
       </form>
     </div>
   );

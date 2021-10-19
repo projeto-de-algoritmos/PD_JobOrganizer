@@ -14,7 +14,7 @@ export const JobList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="lista">
       <h1>Lista de Trabalhos</h1>
       <div className="job-list">
         {jobs.map((job) => (
